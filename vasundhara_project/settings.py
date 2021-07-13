@@ -88,7 +88,8 @@ DATABASES = {
         'HOST': 'localhost',    
         'USER': 'root',
         'PASSWORD': 'root',
-        'PORT': 3306
+        'PORT': 3306,
+        'CONN_MAX_AGE': 500
     },
     'sql': {
         'ENGINE': 'django.db.backends.sqlite3',
