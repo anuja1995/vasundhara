@@ -68,8 +68,6 @@ jupyterlab-widgets==1.0.0
 keyring==21.4.0
 MarkupSafe==1.1.1
 mistune==0.8.4
-mysql-connector-python==2.1.8
-mysqlclient @ file:///C:/Users/Anuja/Downloads/mysqlclient-1.4.6-cp38-cp38-win32.whl
 nbclassic==0.2.6
 nbclient==0.5.3
 nbconvert==6.0.7
@@ -101,7 +99,6 @@ pytest==6.2.2
 python-bidi==0.4.2
 python-dateutil==2.8.1
 pytz==2020.1
-pywin32==300
 pywin32-ctypes==0.2.0
 pywinpty==0.5.7
 pyzmq==22.0.3
