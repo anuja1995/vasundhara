@@ -91,15 +91,6 @@ DATABASES = {
         'PASSWORD': 'root',
         'PORT': '5432'
     },
-    'mysql': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'vasundhara',
-        'HOST': 'localhost',    
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'PORT': 3306,
-        'CONN_MAX_AGE': 500
-    },
     'sql': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -153,3 +144,14 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+
+# 'mysql': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'vasundhara',
+#         'HOST': 'localhost',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'PORT': 3306,
+#         'CONN_MAX_AGE': 500
+#     },
