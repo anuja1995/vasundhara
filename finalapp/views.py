@@ -20,7 +20,7 @@ from django.template.loader import get_template
 # from django.contrib.staticfiles import finders
 from .models import Student_Details
 # from django.contrib.auth.models import User
-from .forms import RegisterForm
+from .forms import RegisterForm,RegisterForm_class9
 
 from io import BytesIO
 # from django.template.loader import get_template
@@ -262,7 +262,7 @@ def StudentDetailsView(request, *args, **kwargs):
 
 def class9_StudentDetailsView(request, *args, **kwargs):
     if request.method == 'POST':
-        form = RegisterForm(request.POST)
+        form = RegisterForm_class9(request.POST)
         # print(form)
         if form.is_valid():
             # form.save()
@@ -401,8 +401,8 @@ def class9_StudentDetailsView(request, *args, **kwargs):
             return HttpResponse(pdf, content_type='application/pdf')
             # return render(request, 'demo.html', {'users': users})
     else:
-        form = RegisterForm()
-    return render(request, 'finalapp/student_details_form.html',{'form':form})
+        form = RegisterForm_class9()
+    return render(request, 'finalapp/student_details_form_9th.html',{'form':form})
 
 def render_to_pdf(template_src, context_dict):
     template = get_template(template_src)
@@ -413,6 +413,7 @@ def render_to_pdf(template_src, context_dict):
     if not pdf.err:
         return HttpResponse(result.getvalue(), content_type='application/pdf')
     return None
+
 
 
 

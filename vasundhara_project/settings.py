@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'm=vytl^v#s#2i9exp3*f+=@wpyjwr&d_s=0za5=!1wzrx&oa!$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -84,6 +84,14 @@ WSGI_APPLICATION = 'vasundhara_project.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'vasundhara_pg',
+        'HOST': 'localhost',
+        'USER': 'postgres',
+        'PASSWORD': 'root',
+        'PORT': '5432'
+    },
+    'mysql': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'vasundhara',
         'HOST': 'localhost',    
