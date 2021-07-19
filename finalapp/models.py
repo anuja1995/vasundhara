@@ -59,15 +59,15 @@ class Section_Master(models.Model):
         db_table = 'section_master'
 
 class Student_Details(models.Model):
-    Academic_Session = models.CharField('Academic Session',choices=ACADEMIC_SESSION,max_length=50,null=True)
-    Stud_class = models.CharField('Student Class',choices=CLASSES_CHOICES,max_length=50,null=True)
+    Academic_Session = models.CharField('Academic Session',choices=ACADEMIC_SESSION,max_length=50,default='2000-2021')
+    Stud_class = models.CharField('Student Class',choices=CLASSES_CHOICES,max_length=50,default='5th')
    # Stud_class = models.ForeignKey(Classes_Master,on_delete=models.SET_NULL, null=True,related_name='stud_info')
-    Section = models.CharField('Student Section',choices=SECTION_CHOICES,max_length=50,null=True)
+    Section = models.CharField('Student Section',choices=SECTION_CHOICES,max_length=50,default='A')
     # Section = models.ForeignKey(Section_Master,on_delete=models.SET_NULL, null=True,related_name='stud_info_sec')
-    Roll_no = models.IntegerField('Roll No',blank=False,unique=False)
+    Roll_no = models.IntegerField('Roll No',blank=False)
     Student_name = models.CharField('Student`s Name',max_length=100)
-    Father_name = models.CharField('Father`s Name',max_length=100,null=True)
-    Mother_name = models.CharField('Mother`s Name', max_length=100,null=True)
+    Father_name = models.CharField('Father`s Name',max_length=100,default='NA')
+    Mother_name = models.CharField('Mother`s Name', max_length=100,default='NA')
     Date_of_Birth = models.DateField(null=True)
     # term 1
     # English
@@ -167,16 +167,16 @@ class Student_Details(models.Model):
     So_Sci_Marks_obtained_term2 = models.IntegerField('So_Sci_Marks_obtained_term2',default=0,null=True)
     So_Sci_Grade_term2 = models.CharField('So_Sci_Grade_term2', max_length=10,default=0,null=True)
 
-    Work_Education_term1 = models.CharField('Work_Education_term1',choices=GRADE_CHOICES,max_length=50,null=True)
-    Work_Education_term2 = models.CharField('Work_Education_term2', choices=GRADE_CHOICES, max_length=50, null=True)
-    Art_Education_term1  = models.CharField('Art_Education_term1', choices=GRADE_CHOICES, max_length=50, null=True)
-    Art_Education_term2 = models.CharField('Art_Education_term2', choices=GRADE_CHOICES, max_length=50, null=True)
-    H_P_Education_term1 = models.CharField('H_P_Education_term1', choices=GRADE_CHOICES, max_length=50, null=True)
-    H_P_Education_term2 = models.CharField('H_P_Education_term2', choices=GRADE_CHOICES, max_length=50, null=True)
-    Discipline_term1 = models.CharField('Discipline_term1', choices=GRADE_CHOICES, max_length=50, null=True)
-    Discipline_term2 = models.CharField('Discipline_term2', choices=GRADE_CHOICES, max_length=50, null=True)
+    Work_Education_term1 = models.CharField('Work_Education_term1',choices=GRADE_CHOICES,max_length=50,default='A')
+    Work_Education_term2 = models.CharField('Work_Education_term2', choices=GRADE_CHOICES, max_length=50,default='A')
+    Art_Education_term1  = models.CharField('Art_Education_term1', choices=GRADE_CHOICES, max_length=50,default='A')
+    Art_Education_term2 = models.CharField('Art_Education_term2', choices=GRADE_CHOICES, max_length=50,default='A')
+    H_P_Education_term1 = models.CharField('H_P_Education_term1', choices=GRADE_CHOICES, max_length=50,default='A')
+    H_P_Education_term2 = models.CharField('H_P_Education_term2', choices=GRADE_CHOICES, max_length=50,default='A')
+    Discipline_term1 = models.CharField('Discipline_term1', choices=GRADE_CHOICES, max_length=50,default='A')
+    Discipline_term2 = models.CharField('Discipline_term2', choices=GRADE_CHOICES, max_length=50,default='A')
 
-    Promoted_to_class = models.CharField('Promoted_to_class',choices=CLASSES_CHOICES,max_length=50,null=True)
+    Promoted_to_class = models.CharField('Promoted_to_class',choices=CLASSES_CHOICES,max_length=50,default='9th')
 
 
 

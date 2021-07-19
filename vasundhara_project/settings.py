@@ -40,10 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'widget_tweaks',
     'crispy_forms',
-    # 'student',
     'finalapp'
-    # 'pdfgeneration'
 ]
+    # 'pdfgeneration'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
