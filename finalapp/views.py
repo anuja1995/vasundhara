@@ -269,7 +269,8 @@ def class9_StudentDetailsView(request, *args, **kwargs):
         form = RegisterForm_class9(request.POST)
         # print(form)
         if form.is_valid():
-            form.save()
+            # print(form)
+            # form.save()
             Academic_Session = form.data['Academic_Session']
             Stud_class = form.data['Stud_class']
             Section = form.data['Section']
