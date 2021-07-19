@@ -1,1 +1,1 @@
-gunicorn vasundhara_project.wsgi
+gunicorn vasundhara_project.vasundhara_project.wsgi
