@@ -1,1 +1,1 @@
-gunicorn vasundhara_project.wsgi --log-file -
+gunicorn vasundhara_project.wsgi
