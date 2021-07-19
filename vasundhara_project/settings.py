@@ -83,13 +83,21 @@ WSGI_APPLICATION = 'vasundhara_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'vasundhara_pg',
-        'HOST': 'localhost',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd3brmdq8smtbca',
+        'HOST': 'ec2-23-21-4-7.compute-1.amazonaws.com',
+        'USER': 'hwvatclkofmtws',
+        'PASSWORD': 'ecd2a605221755d572258db90e6af41df1ba59b5ca07531f583cb03554122650',
         'PORT': '5432'
     },
+#     'default_backup': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'vasundhara_pg',
+#         'HOST': 'localhost',
+#         'USER': 'postgres',
+#         'PASSWORD': 'root',
+#         'PORT': '5432'
+#     },
     'sql': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
