@@ -27,6 +27,10 @@ from io import BytesIO
 from xhtml2pdf import pisa
 from django.template import Context
 
+from django.http import HttpResponse
+
+def index(request):
+    return render(request, 'home.html')
 
 def Grade(sub_marks):
     if sub_marks > 80:
@@ -265,7 +269,7 @@ def class9_StudentDetailsView(request, *args, **kwargs):
         form = RegisterForm_class9(request.POST)
         # print(form)
         if form.is_valid():
-            # form.save()
+            form.save()
             Academic_Session = form.data['Academic_Session']
             Stud_class = form.data['Stud_class']
             Section = form.data['Section']
