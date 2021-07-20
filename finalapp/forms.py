@@ -2,6 +2,9 @@ from django import forms
 from django.forms import ModelForm,Textarea
 from .models import Student_Details
 
+class DateInput(forms.DateInput):
+    input_type = 'date'
+
 class RegisterForm(ModelForm):
     # Student_name = forms.CharField(label='Student_Name', max_length=100)
     # Father_name = forms.CharField(label='Father_Name', max_length=100)
@@ -28,6 +31,9 @@ class RegisterForm(ModelForm):
                   'H_P_Education_term2','Discipline_term1','Discipline_term2','Promoted_to_class'
 
                   ]
+        widgets = {
+            'Date_of_Birth': DateInput(),
+        }
 
 
 class RegisterForm_class9(ModelForm):
@@ -50,6 +56,9 @@ class RegisterForm_class9(ModelForm):
                   'H_P_Education_term2','Discipline_term2','Promoted_to_class'
 
                   ]
+        widgets = {
+            'Date_of_Birth': DateInput(),
+        }
 
 
 # class RegisterForm(forms.Form):
