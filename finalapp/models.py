@@ -4,7 +4,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 ACADEMIC_SESSION = (
     ('-','Select'),
     ('2019-2020','2019-2020'),
-    ('2000-2021','2000-2021'),
+    ('2020-2021','2020-2021'),
     ('2021-2022','2021-2022')
 )
 # SUBJECTS_CHOICES = (
@@ -64,10 +64,10 @@ class Student_Details(models.Model):
    # Stud_class = models.ForeignKey(Classes_Master,on_delete=models.SET_NULL, null=True,related_name='stud_info')
     Section = models.CharField('Student Section',choices=SECTION_CHOICES,max_length=50,default='A')
     # Section = models.ForeignKey(Section_Master,on_delete=models.SET_NULL, null=True,related_name='stud_info_sec')
-    Roll_no = models.IntegerField('Roll No',blank=False)
+    Roll_no = models.IntegerField('Roll No',unique=False)
     Student_name = models.CharField('Student`s Name',max_length=100)
-    Father_name = models.CharField('Father`s Name',max_length=100,default='NA')
-    Mother_name = models.CharField('Mother`s Name', max_length=100,default='NA')
+    Father_name = models.CharField('Father`s Name',max_length=100)
+    Mother_name = models.CharField('Mother`s Name', max_length=100)
     Date_of_Birth = models.DateField(null=True)
     # term 1
     # English
